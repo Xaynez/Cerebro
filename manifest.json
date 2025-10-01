@@ -25,3 +25,15 @@ nano extension/manifest.json
     "128": "icons/128.png"
   }
 }
+extension/
+│
+├─ icons/
+│   ├─ 48.png
+│   └─ 128.png
+│
+├─ manifest.json
+├─ background.js
+├─ content_script.js
+├─ aiClient.js
+├─ panel.html
+└─ panel.js
