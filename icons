@@ -1,0 +1,3 @@
+mkdir -p extension/icons
+curl -sS https://via.placeholder.com/48 -o extension/icons/48.png
+curl -sS https://via.placeholder.com/128 -o extension/icons/128.png
