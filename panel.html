@@ -1,0 +1,35 @@
+cat > extension/panel.html <<'EOF'
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Cerebro</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 10px; color: #111; }
+      h2 { margin: 0 0 8px 0; font-size: 16px; }
+      #controls { margin-bottom: 10px; display:flex; gap:8px; align-items:center; }
+      button { padding: 6px 10px; border-radius:6px; border: none; background:#1976d2; color:white; cursor:pointer; }
+      button.secondary { background:#4caf50; }
+      input, textarea { font-size:13px; padding:6px; border:1px solid #ccc; border-radius:6px; }
+      #output { white-space: pre-wrap; margin-top:10px; max-height:320px; overflow:auto; border:1px solid #eee; padding:8px; border-radius:6px; background:#fafafa; }
+      #small { font-size:12px; color:#666; margin-top:6px; }
+    </style>
+  </head>
+  <body>
+    <h2>Cerebro — Quick Actions</h2>
+    <div id="controls">
+      <button id="synthesize">Synthesize Open Tabs</button>
+      <button id="explainImage">Explain Last Image</button>
+      <button id="createSheet" class="secondary">Generate Google Sheet</button>
+    </div>
+    <div>
+      <input id="prompt" placeholder="Enter prompt or business info (e.g., SaaS 12mo projection...)" style="width:68%" />
+    </div>
+    <div id="small">Tip: Open demo pages (article, table, image) before running synthesize.</div>
+    <div id="output">Output will appear here.</div>
+
+    <script src="aiClient.js"></script>
+    <script src="panel.js"></script>
+  </body>
+</html>
+EOF
